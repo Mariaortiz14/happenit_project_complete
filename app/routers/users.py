@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException, Form, status
 from sqlalchemy.orm import Session
-from app.database import get_db
-from app.models.user import User
-from app.schemas.user import UserCreate, UserResponse, LoginRequest,UserUpdate
-from app.auth.auth import create_access_token
+from database import get_db
+from models.user import User
+from schemas.user import UserCreate, UserResponse, LoginRequest,UserUpdate
+from auth.auth import create_access_token
 import bcrypt
 from datetime import datetime, timedelta
 from typing import List

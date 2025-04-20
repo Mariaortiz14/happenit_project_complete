@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from app.models.event import Event
-from app.schemas.event import EventCreate, EventUpdate
+from models.event import Event
+from schemas.event import EventCreate, EventUpdate
 from datetime import datetime
 from typing import List
 

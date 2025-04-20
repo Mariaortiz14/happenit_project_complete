@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from app.models.pqr import PQR
-from app.schemas.pqr import PQRCreate
+from models.pqr import PQR
+from schemas.pqr import PQRCreate
 
 def create_pqr(db: Session, pqr_data: PQRCreate) -> PQR:
     new_pqr = PQR(

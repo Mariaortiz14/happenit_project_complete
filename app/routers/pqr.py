@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from app.schemas.pqr import PQRCreate, PQRResponse
-from app.database import get_db
-from app.crud import pqr as crud_pqr
+from schemas.pqr import PQRCreate, PQRResponse
+from database import get_db
+from crud import pqr as crud_pqr
 
 router = APIRouter(
     prefix="/pqr",

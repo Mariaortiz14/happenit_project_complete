@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict
-from app.schemas.user import UserResponse  
+from schemas.user import UserResponse  
 
 class EventCreate(BaseModel):
     user_id: int

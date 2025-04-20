@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session, joinedload
-from app.models.comment import Comment
-from app.models.event import Event
-from app.models.user import User
-from app.schemas.comment import CommentCreate
+from models.comment import Comment
+from models.event import Event
+from models.user import User
+from schemas.comment import CommentCreate
 
 def create_comment(db: Session, comment: CommentCreate, current_user: User):
     event = db.query(Event).filter(Event.id == comment.event_id).first()

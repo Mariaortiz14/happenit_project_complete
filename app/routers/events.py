@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends, HTTPException, Form
 from sqlalchemy.orm import Session
-from app.database import get_db
-from app.models.event import Event
-from app.models.user import User
-from app.schemas.event import EventCreate, EventResponse, EventUpdate
-from app.schemas.user import UserResponse
-from app.auth.auth import get_current_user
+from database import get_db
+from models.event import Event
+from models.user import User
+from schemas.event import EventCreate, EventResponse, EventUpdate
+from schemas.user import UserResponse
+from auth.auth import get_current_user
 from datetime import datetime
 from typing import List
 from sqlalchemy import desc
