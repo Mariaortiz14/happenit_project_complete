@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=tramway.proxy.rlwy.net
+      - DB_PORT=28729
+      - DB_NAME=railway
+      - DB_USER=root
+      - DB_PASSWORD=YTBeOxWoqBQXbtmqhPpXjPEMXkfJUguY

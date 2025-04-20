@@ -1,0 +1,19 @@
+# Dockerfile
+FROM bitnami/python:3.11
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+# Instalar netcat y dependencias necesarias
+RUN install_packages netcat-openbsd && \
+    pip install --no-cache-dir cryptography && \
+    pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+
+
+EXPOSE 8000
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

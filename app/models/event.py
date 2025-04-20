@@ -9,7 +9,7 @@ class Event(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     title = Column(String(200), nullable=False)
-    description = Column(String, nullable=False)
+    description = Column(String(999), nullable=False)
     event_date = Column(DateTime, nullable=False)
     location = Column(String(255), nullable=False)
     category = Column(Enum("gastronomía", "conferencias", "deportes", "festival", "conciertos", "teatros", "otro"), nullable=False)
