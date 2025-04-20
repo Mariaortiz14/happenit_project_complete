@@ -7,8 +7,8 @@ from auth.auth import create_access_token
 import bcrypt
 from datetime import datetime, timedelta
 from typing import List
-from app.models.event import Event
-from app.schemas.event import EventResponse
+from models.event import Event
+from schemas.event import EventResponse
 
 router = APIRouter(
     prefix="/users",

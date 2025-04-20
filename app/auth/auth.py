@@ -2,8 +2,8 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 from sqlalchemy.orm import Session
-from app.database import get_db
-from app.models.user import User
+from database import get_db
+from models.user import User
 
 SECRET_KEY = "clave-secreta-happenit"
 ALGORITHM = "HS256"
