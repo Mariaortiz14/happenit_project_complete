@@ -22,3 +22,5 @@ app.include_router(comment.router)
 @app.get("/")
 def read_root():
     return {"message": "¡Bienvenido a Happenit!"}
+
+print("Routers cargados: /users, /events, /pqr, /comment")

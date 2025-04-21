@@ -15,5 +15,5 @@ class Event(Base):
     category = Column(Enum("gastronomía", "conferencias", "deportes", "festival", "conciertos", "teatros", "otro"), nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow)
 
-    comments = relationship("app.models.comment.Comment", back_populates="event")
+    comments = relationship("models.comment.Comment", back_populates="event")
     user = relationship("User", back_populates="events")

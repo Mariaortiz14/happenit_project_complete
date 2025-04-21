@@ -14,7 +14,7 @@ class User(Base):
     hashed_password = Column(String(255), nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow)
 
-    comments = relationship("app.models.comment.Comment", back_populates="user")
+    comments = relationship("models.comment.Comment", back_populates="user")
     events = relationship("Event", back_populates="user")
     pqrs = relationship("PQR", back_populates="user")
 
